@@ -62,3 +62,12 @@ closed out of a terminal that was running it.
 ```sh
 sudo kill -9 $(sudo lsof -t -i:«port_number»)
 ```
+
+### `apt-get update` Release File not yet valid
+
+Sometimes the clock in Ubuntu in WSL will drift away from the clock of your PC.
+You can fix that by running:
+
+```sh
+sudo hwclock --hctosys
+```
