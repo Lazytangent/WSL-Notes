@@ -46,11 +46,12 @@ ip addr | grep eth0
    Windows's localhost.
 
 In Powershell:
-    1. Run `wsl --shutdown`
-    2. Open a new instance of WSL
-    3. Restart your database
-        * For PostgreSQL on Ubuntu, run `sudo service postgresql start`
-    4. Start your server and try to connect from Windows's localhost
+
+1. Run `wsl --shutdown`
+2. Open a new instance of WSL
+3. Restart your database
+    * For PostgreSQL on Ubuntu, run `sudo service postgresql start`
+4. Start your server and try to connect from Windows's localhost
 
 You can optionally just restart your PC to restart WSL.
 
