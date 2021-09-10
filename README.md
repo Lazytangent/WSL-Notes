@@ -72,3 +72,16 @@ You can fix that by running:
 ```sh
 sudo hwclock --hctosys
 ```
+
+### Postgres Issues
+
+If running `psql` and `psql -h localhost` give you slightly different prompts,
+there's probably two instances of Postgres running on the computer: one in WSL
+and one in Windows. Odds are, your application will try to connect to the
+Windows instance of Postgres. To avoid this issue, you can add the following
+alias to the bottom of your `rc` file (`.bashrc` or `.zshrc` depending on which
+shell you're running).
+
+```sh
+alias psql="psql -h localhost"
+```
